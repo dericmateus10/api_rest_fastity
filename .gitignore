@@ -1,0 +1,38 @@
+# Dependências instaladas pelo npm/yarn/pnpm
+node_modules/
+
+# Saída de build/transpiled (caso use dist/, build/ ou outra pasta de saída)
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos de ambiente (dotenv)
+.env
+.env.local
+.env.*.local
+
+# Cache do TypeScript
+*.tsbuildinfo
+
+# Pastas de cobertura de testes
+coverage/
+
+# Arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Configurações de IDE/editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Outros artefatos de depuração
+debug.log
