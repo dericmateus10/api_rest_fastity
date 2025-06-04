@@ -1,5 +1,6 @@
 # Dependências instaladas pelo npm/yarn/pnpm
 node_modules/
+tmp/app.db
 
 # Saída de build/transpiled (caso use dist/, build/ ou outra pasta de saída)
 dist/
