@@ -46,12 +46,23 @@ app.post("/", async (request, reply) => {
         
     });
     const {title, amount, type} = createTransactionsBodySchema.parse(request.body);
+
+    let session_id = request.cookies.session_id;
+    if (!session_id) {
+        session_id = randomUUID();
+        reply.cookie('sessionId', session_id, {
+            path: '/',
+            maxAge: 60 * 60 * 24 * 7, // 7 days
+        });
+    }
+
     await knex('transactions')
     .insert({
         id: randomUUID(),
         title,
         amount: type === 'credit' ? amount : -amount,
         created_at: new Date(),
+        session_id,
     })
 
 
