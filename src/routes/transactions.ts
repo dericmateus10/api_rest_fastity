@@ -27,6 +27,16 @@ app.get("/:id", async (request) => {
     };
 });
 
+app.get("/summary", async () => {
+    const summary = await knex('transactions')
+    .sum('amount', { as: 'amount' })
+    .first();
+
+    return {
+        summary,
+    };
+});
+
 
 app.post("/", async (request, reply) => {
     const createTransactionsBodySchema = z.object({
