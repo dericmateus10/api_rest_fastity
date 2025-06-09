@@ -6,6 +6,11 @@ import { checkSessionIdExists } from '../middlewares/check-session-id-exists';
 
 export async function transactionsRoutes(app: FastifyInstance) {
 
+app.addHook('preHandler', async (request, reply) => {
+    console.log(`Request received: ${request.method} ${request.url}`);
+    // You can add more logging or processing here if needed
+});
+
 app.get("/", {
     preHandler: [checkSessionIdExists],
 }, 
