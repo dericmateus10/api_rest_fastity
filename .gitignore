@@ -1,6 +1,9 @@
 # Dependências instaladas pelo npm/yarn/pnpm
 node_modules/
+
+# Database de desenvolvimento
 db/app.db
+db/test.db
 
 # Saída de build/transpiled (caso use dist/, build/ ou outra pasta de saída)
 dist/
