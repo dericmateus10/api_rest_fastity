@@ -1,4 +1,4 @@
-import { config } from './src/database'
+// knexfile.ts (modo CommonJS)
+const { config } = require('./src/database');
 
-
-export default config
+module.exports = config;
