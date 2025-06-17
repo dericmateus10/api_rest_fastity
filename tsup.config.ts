@@ -13,6 +13,8 @@ export default defineConfig({
   target: 'es2016',
   format: ['cjs'],
   external: [
+    'pg',
+    'pg-query-stream', // <-- make sure this is here
     'mysql',
     'mysql2',
     'oracledb',
